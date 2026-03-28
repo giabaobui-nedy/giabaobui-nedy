@@ -1,4 +1,4 @@
-# Hi, I'm Bao 👋 🎵
+# Hi, I'm Bao 👋 🎵 My profile picture is drawn by my dear younger sister ❤️
 
 Software Engineer based in Melbourne 🇦🇺 — I love to build systems that actually work in the real world.
 
@@ -57,23 +57,52 @@ Once the models were integrated, I connected them with **graph search algorithms
 
 Using NetworkX, I mapped intersections using coordinate data and simulated real routing behaviour across the network.
 
-→ This project made me realise that building AI systems isn’t just about the model —  
-it’s about designing the layers *around* it so everything works together.
+**→ This project made me realise that building AI systems isn’t just about the model — it’s about designing the layers *around* it so everything works together.**
+
 ---
 
 ### 📦 Logistics Company Platform  
-A **cloud-native full-stack system** deployed using:
+
+A **cloud-native full-stack system** designed to explore how real-world platforms are built and deployed end-to-end.
+
+Built with:
 - Terraform (ECS Fargate, ALB, ECR)
-- Docker + GitHub Actions CI/CD
+- Docker + GitHub Actions CI/CD  
 - GraphQL API + Next.js frontend  
 
-→ Focus: *how real systems are deployed, not just built*
+This project started as a way for me to go deeper into **infrastructure as code and deployment pipelines** — not just writing features, but understanding how systems actually run in production.
+
+More personally, I began building this with the idea of creating something that could eventually help my dad’s logistics-related work.  
+It’s still a work in progress, and I haven’t been able to give it as much time as I’d like — but it’s something I want to keep coming back to and growing properly.
+
+→ For me, this project is less about finishing fast, and more about learning how to build systems that are *practical, scalable, and meaningful*.
 
 ---
 
 ### 📱 Planner Android App  
+
 A personal planner with **clean architecture (Repository + ViewModel + Room)**  
 Also includes performance optimisation using **Baseline Profiles + Macrobenchmark**
+
+This was my favourite unit at Swinburne — COS30017 (Creating Software for Mobile Devices).
+
+One thing I still remember clearly was how frustrating Android development was at the start.  
+Before I even wrote any real code, I got stuck for a long time just trying to resolve dependency issues with the Room library. Nothing worked properly, and it honestly felt overwhelming.
+
+But that experience taught me something important:
+→ understanding your tools and setting up the project correctly from the beginning is already a big win.
+
+Once I got past that stage, I really wanted to do this project properly, not just make it work.
+
+For this project, I:
+- implemented clean architecture for better separation of concerns  
+- explored automated UI simulation testing  
+- conducted macrobenchmark testing  
+- integrated Android Baseline Profiles to improve performance  
+
+I pushed myself quite hard to achieve a high distinction — especially around performance optimisation — and made sure I could actually measure and justify the improvements instead of just assuming them.
+
+It was stressful, but also one of the most memorable and meaningful units for me.
 
 → Focus: *good architecture + real performance improvements*
 
@@ -104,7 +133,7 @@ I sing. A lot.
 
 Not trying to be perfect — just enjoy it.
 
-👉 YouTube: [your link here]
+👉 YouTube: [My Youtube](https://www.youtube.com/@giabaobui4283)
 
 ---
 
@@ -116,5 +145,5 @@ I enjoy conversations about:
 - real-world engineering trade-offs  
 - or just music  
 
-🌐 Portfolio: [link]  
-💼 LinkedIn: [link]
+🌐 Portfolio: [giabaobui.com](https://portfolio-website-vert-one-72.vercel.app/)
+💼 LinkedIn: [My LinkedIn](https://www.linkedin.com/in/gia-bao-bui-227476227/)
