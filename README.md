@@ -26,7 +26,7 @@ At SONIQ, I’ve been working on things like:
 - analysing and mapping **microservice architectures** for better maintainability  
 - improving **frontend structure and responsiveness across real devices**  
 
-Before that, at CSIRO, I built a **lab automation system** used by researchers — turning manual workflows into a real-time, production-grade platform and led the research, design, and development of a mobile app
+Before that, at CSIRO, I built a **lab automation system** used by researchers — turning manual workflows into a real-time, production-grade platform and led the research, design, and development of a mobile app that streamlines the workflows of the operators at a copper refinery.
 
 ---
 
