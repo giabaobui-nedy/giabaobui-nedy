@@ -32,8 +32,8 @@ Right now, most of my time goes into:
 I build the React frontend and the event-driven microservices behind a digital signage CMS. It is sold as SaaS and runs on AWS.
 
 **☁️ Cloud & cost**
-- Re-architected a transactional-outbox pipeline. A managed DMS → Kinesis → Lambda fan-out became a small poller on each service’s existing Fargate task, publishing straight to EventBridge.
-- Built an event-driven scheduler (Lambda + EventBridge, as a CDK stack) that shuts non-production environments down overnight and at weekends.
+- Re-architected a transactional-outbox pipeline. A managed DMS → Kinesis → Lambda fan-out became a small poller on each service’s existing Fargate task, publishing straight to EventBridge. Total cloud spend across all three environments, production included, dropped **~26%** in the first full month and is trending to **~40%**. DMS and Kinesis spend went to **0**.
+- Built an event-driven scheduler (Lambda + EventBridge, as a CDK stack) that shuts non-production environments down overnight and at weekends, cutting staging costs by **33%**.
 - Found why an Aurora Serverless cluster sat at 5× idle capacity all day: a once-per-second query scanning a 1.7 GB table with no index. One composite index, rolled out across 4 services and 12 databases.
 
 **🔄 Event-driven integrations**
