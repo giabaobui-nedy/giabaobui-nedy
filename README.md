@@ -10,6 +10,8 @@ I don’t really define myself by a specific tech stack — I care more about:
 - debugging things until they *actually make sense*
 - and...vibe-code
 
+I also keep my problem-solving sharp with regular [LeetCode practice](https://github.com/giabaobui-nedy/LeetCode-Solutions).
+
 ---
 
 ## 🧠 What I enjoy working on
@@ -79,6 +81,18 @@ It’s still a work in progress, and I haven’t been able to give it as much ti
 
 ---
 
+### 🤖 CV Pipeline
+
+A **spec-driven CV tailoring system** I built to make different AI models produce the same, truthful application package every time.
+
+The master CV and a tagged bullet bank are the source of truth. For each job ad, an AI agent (Claude Code skills) reads the role, picks matching bullets into a small YAML spec, and Python renderers turn that spec into a one-page LaTeX CV and cover letter.
+
+The model acts as a careful editor, not a writer: it can select and rank real evidence, but it cannot invent stronger claims.
+
+→ Focus: *constraining AI with structure, so the output is consistent and honest*
+
+---
+
 ### 📱 Planner Android App  
 
 A personal planner with **clean architecture (Repository + ViewModel + Room)**  
@@ -108,6 +122,42 @@ It was stressful, but also one of the most memorable and meaningful units for me
 
 ---
 
+## 📈 GitHub activity
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=giabaobui-nedy&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000&theme=dark" />
+    <img height="170" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=giabaobui-nedy&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=giabaobui-nedy&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&theme=dark" />
+    <img height="170" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=giabaobui-nedy&layout=compact&langs_count=8&hide_border=true&bg_color=00000000" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=giabaobui-nedy&theme=dark&hide_border=true&background=00000000" />
+    <img alt="Contribution streak" src="https://streak-stats.demolab.com?user=giabaobui-nedy&hide_border=true&background=00000000" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=giabaobui-nedy&theme=github_dark" />
+    <img width="100%" alt="Contribution summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=giabaobui-nedy&theme=default" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/giabaobui-nedy/giabaobui-nedy/output/github-contribution-grid-snake-dark.svg" />
+    <img width="100%" alt="Contribution snake" src="https://raw.githubusercontent.com/giabaobui-nedy/giabaobui-nedy/output/github-contribution-grid-snake.svg" />
+  </picture>
+</p>
+
+---
+
 ## 🛠️ Tech I’ve worked with
 
 **Languages**  
@@ -120,7 +170,7 @@ React, Next.js, Vue, Nuxt, React Native
 Node.js, NestJS, FastAPI, Flask, GraphQL, REST  
 
 **Cloud / DevOps**  
-AWS (ECS, ECR, ALB, SES), Docker, Terraform, CI/CD, GitHub Actions  
+AWS (Lambda, EventBridge, ECS, ECR, ALB, SES, CDK), Docker, Terraform, CI/CD, GitHub Actions  
 
 **Databases**  
 PostgreSQL, MySQL, InfluxDB  
@@ -145,5 +195,5 @@ I enjoy conversations about:
 - real-world engineering trade-offs  
 - or just music  
 
-🌐 Portfolio: [giabaobui.com](https://portfolio-website-vert-one-72.vercel.app/)
+🌐 Portfolio: [baobuild.dev](https://baobuild.dev)  
 💼 LinkedIn: [My LinkedIn](https://www.linkedin.com/in/gia-bao-bui-227476227/)
