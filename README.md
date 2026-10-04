@@ -23,102 +23,50 @@ Right now, most of my time goes into:
 - 📊 **Real-world constraints** — cost optimisation, legacy systems, scalability & feasibility  
 - 🧩 **End-to-end thinking** — from UI → backend → infrastructure → hardware devices
 
-At SONIQ, I’ve been working on things like:
-- designing a **media transcoding pipeline (4K → FHD)** on AWS  
-- analysing and mapping **microservice architectures** for better maintainability  
-- improving **frontend structure and responsiveness across real devices**  
-
-Before that, at CSIRO, I built a **lab automation system** used by researchers — turning manual workflows into a real-time, production-grade platform and led the research, design, and development of a mobile app that streamlines the workflows of the operators at a copper refinery.
-
 ---
 
-## 🚀 Projects I actually care about
+## 💼 What I’ve been building at work
 
-### 🧭 Intelligent Traffic Route Guidance System
-This is one of my favourite projects — not because it was perfect, but because it was the first time I really saw how **AI + systems** come together.
+### SONIQ Digital · Junior Software Engineer · Feb 2026 – now
 
-The idea was to simulate a real-world routing system (similar to Google Maps) by combining **deep learning models with graph search algorithms**.  
-We worked with limited data, so the AI side wasn’t always “perfect” — but the goal was never just model accuracy. It was about understanding how these pieces fit into a **larger system**.
+I build the React frontend and the event-driven microservices behind a digital signage CMS. It is sold as SaaS and runs on AWS.
 
-I led a small team where each member focused on building and training different models.  
-Rather than training everything myself, I worked closely with them to understand:
-- how each model was structured  
-- how data was processed and shaped  
-- and how predictions could actually be used in a system  
+**☁️ Cloud & cost**
+- Re-architected a transactional-outbox pipeline. A managed DMS → Kinesis → Lambda fan-out became a small poller on each service’s existing Fargate task, publishing straight to EventBridge.
+- Built an event-driven scheduler (Lambda + EventBridge, as a CDK stack) that shuts non-production environments down overnight and at weekends.
+- Found why an Aurora Serverless cluster sat at 5× idle capacity all day: a once-per-second query scanning a 1.7 GB table with no index. One composite index, rolled out across 4 services and 12 databases.
 
-From there, I focused on what I do best — **system design and integration**.
+**🔄 Event-driven integrations**
+- Wired Shopify webhooks into internal microservices (EventBridge + SQS), so buying a device starts a software trial on its own.
+- Built a card-free Stripe trial flow, with deterministic idempotency keys so a customer is never created twice.
+- Built a media pipeline that transcodes 4K uploads to Full HD for a legacy CMS.
 
-I designed a set of base classes to standardise the ML workflow:
-- data processing  
-- model training & validation  
-- prediction interfaces  
+**🧩 Frontend architecture**
+- Led a TypeScript migration with one clear data path: DTO → mapper → domain → API → TanStack Query → hook.
+- Generated TypeScript types from 4 microservices’ OpenAPI specs, so a backend contract change is a one-place edit.
+- Merged two parallel component libraries into one hierarchy, and moved the codebase onto design tokens with a custom lint guard.
+- Fixed an N+1 request pattern in the media library and rebuilt it as a Drive-style browser.
 
-This allowed us to plug different models into the system consistently, without rewriting everything each time.
+**🐛 Debugging things until they make sense**
+- Fixed a production bug where recurring events disappeared. Schedules are set in Melbourne time but checked in UTC, so a local day spans two UTC days. Added boundary tests to CI.
+- Caught a silently broken activation flow in development, by tracing CloudWatch logs across services to a renamed event topic.
+- Found why 30 of 1,153 videos stayed stuck during a staging migration, by following the dead-letter queue, MediaConvert jobs and worker logs.
 
-Once the models were integrated, I connected them with **graph search algorithms** and built a full routing pipeline — from prediction → pathfinding → UI visualisation.
+**🚀 Shipping features**
+- A TypeScript + Playwright CLI that migrates customers off a legacy CMS, with dry runs, verification, rollback and 189 tests.
+- Device grouping end to end (FastAPI + React), with bulk actions and a group filter.
+- Priority-based schedule playback with fallback content, so screens never go blank.
 
-Using NetworkX, I mapped intersections using coordinate data and simulated real routing behaviour across the network.
+### CSIRO · Software Engineering Intern → Casual Software Engineer · Mar 2024 – Jun 2025
 
-**→ This project made me realise that building AI systems isn’t just about the model — it’s about designing the layers *around* it so everything works together.**
+I built a **lab automation system** for researchers. It turned a manual experimental workflow into a real-time, traceable platform.
 
----
-
-### 📦 Logistics Company Platform  
-
-A **cloud-native full-stack system** designed to explore how real-world platforms are built and deployed end-to-end.
-
-Built with:
-- Terraform (ECS Fargate, ALB, ECR)
-- Docker + GitHub Actions CI/CD  
-- GraphQL API + Next.js frontend  
-
-This project started as a way for me to go deeper into **infrastructure as code and deployment pipelines** — not just writing features, but understanding how systems actually run in production.
-
-More personally, I began building this with the idea of creating something that could eventually help my dad’s logistics-related work.  
-It’s still a work in progress, and I haven’t been able to give it as much time as I’d like — but it’s something I want to keep coming back to and growing properly.
-
-→ For me, this project is less about finishing fast, and more about learning how to build systems that are *practical, scalable, and meaningful*.
-
----
-
-### 🤖 CV Pipeline
-
-A **spec-driven CV tailoring system** I built to make different AI models produce the same, truthful application package every time.
-
-The master CV and a tagged bullet bank are the source of truth. For each job ad, an AI agent (Claude Code skills) reads the role, picks matching bullets into a small YAML spec, and Python renderers turn that spec into a one-page LaTeX CV and cover letter.
-
-The model acts as a careful editor, not a writer: it can select and rank real evidence, but it cannot invent stronger claims.
-
-→ Focus: *constraining AI with structure, so the output is consistent and honest*
-
----
-
-### 📱 Planner Android App  
-
-A personal planner with **clean architecture (Repository + ViewModel + Room)**  
-Also includes performance optimisation using **Baseline Profiles + Macrobenchmark**
-
-This was my favourite unit at Swinburne — COS30017 (Creating Software for Mobile Devices).
-
-One thing I still remember clearly was how frustrating Android development was at the start.  
-Before I even wrote any real code, I got stuck for a long time just trying to resolve dependency issues with the Room library. Nothing worked properly, and it honestly felt overwhelming.
-
-But that experience taught me something important:
-→ understanding your tools and setting up the project correctly from the beginning is already a big win.
-
-Once I got past that stage, I really wanted to do this project properly, not just make it work.
-
-For this project, I:
-- implemented clean architecture for better separation of concerns  
-- explored automated UI simulation testing  
-- conducted macrobenchmark testing  
-- integrated Android Baseline Profiles to improve performance  
-
-I pushed myself quite hard to achieve a high distinction — especially around performance optimisation — and made sure I could actually measure and justify the improvements instead of just assuming them.
-
-It was stressful, but also one of the most memorable and meaningful units for me.
-
-→ Focus: *good architecture + real performance improvements*
+- Led full-stack development across Vue/Nuxt, Python (Flask), PostgreSQL and InfluxDB.
+- Designed a configuration-driven firmware layer (UI → server → firmware → Modbus), so new hardware setups need no major refactor.
+- Added hardware locks and firmware-level caching. The system then ran for three months straight in a live lab.
+- Streamed live telemetry into ECharts dashboards over WebSockets.
+- Added Azure Entra ID SSO with role-based middleware, and shipped everything in Docker.
+- Led the research and UI/UX design of a React Native app for copper refinery operators, after comparing Flutter, .NET MAUI and React Native.
 
 ---
 
