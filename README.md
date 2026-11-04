@@ -2,7 +2,7 @@
 
 Software Engineer based in Melbourne 🇦🇺 — I love to build systems that actually work in the real world.
 
-Graduated as the **Highest Achieving Computer Science student at Swinburne**, and currently working across cloud-native systems, event-driven microservice-based architectures, and full-stack applications at SONIQ Digital.
+Graduated as the **Highest Achieving Computer Science student at Swinburne**. I am now an **Associate Software Engineer at Canonical**, on the Snap Store team. Before that, I built cloud-native systems, event-driven microservices and full-stack applications at SONIQ Digital and CSIRO.
 
 I don’t really define myself by a specific tech stack — I care more about:
 - breaking down complex problems
@@ -16,8 +16,7 @@ I also keep my problem-solving sharp with regular [LeetCode practice](https://gi
 
 ## 🧠 What I enjoy working on
 
-Right now, most of my time goes into:
-
+- 🐧 **Linux and open source** — snaps, Ubuntu and the Snap Store  
 - ⚙️ **Cloud-native systems** — AWS, microservices, event-driven design  
 - 🔄 **System refactoring** — turning messy frontend codebase into structured architectures  
 - 📊 **Real-world constraints** — cost optimisation, legacy systems, scalability & feasibility  
@@ -27,14 +26,18 @@ Right now, most of my time goes into:
 
 ## 💼 What I’ve been building at work
 
-### SONIQ Digital · Junior Software Engineer · Feb 2026 – now
+### Canonical · Associate Software Engineer · Nov 2026 – now
 
-I build the React frontend and the event-driven microservices behind a digital signage CMS. It is sold as SaaS and runs on AWS.
+I work on the Snap Store in the SaaS Engineering organisation. The Snap Store is Canonical’s app store for Linux software packaged as snaps. More here once I have shipped something 🙂
+
+### SONIQ Digital · Junior Software Engineer · Feb 2026 – Oct 2026
+
+I built the React frontend and the event-driven microservices behind a digital signage CMS. It is sold as SaaS and runs on AWS.
 
 **☁️ Cloud & cost**
-- Re-architected a transactional-outbox pipeline. A managed DMS → Kinesis → Lambda fan-out became a small poller on each service’s existing Fargate task, publishing straight to EventBridge. Total cloud spend across all three environments, production included, dropped **~26%** in the first full month and is trending to **~40%**. DMS and Kinesis spend went to **0**.
-- Built an event-driven scheduler (Lambda + EventBridge, as a CDK stack) that shuts non-production environments down overnight and at weekends, cutting staging costs by **33%**.
-- Found why an Aurora Serverless cluster sat at 5× idle capacity all day: a once-per-second query scanning a 1.7 GB table with no index. One composite index, rolled out across 4 services and 12 databases.
+- Re-architected a transactional-outbox pipeline. A managed DMS → Kinesis → Lambda fan-out became a small poller on each service’s existing Fargate task, publishing straight to EventBridge. This removed the DMS and Kinesis spend entirely, about **40%** of the combined bill across three environments. Production cost dropped **26%** in the first full month.
+- Built an event-driven scheduler (Lambda + EventBridge, as a CDK stack) that shuts non-production environments down overnight and at weekends, cutting staging costs by **30%**.
+- Found why an Aurora Serverless cluster sat at 5× idle capacity all day: a once-per-second query scanning a 1.7 GB table with no index. I shipped a composite index to fix it.
 
 **🔄 Event-driven integrations**
 - Wired Shopify webhooks into internal microservices (EventBridge + SQS), so buying a device starts a software trial on its own.
